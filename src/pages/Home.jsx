@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import User from "../components/User";
 
 const Home = () => {
   const [blogs, setblogs] = useState([]);
@@ -17,6 +18,7 @@ const Home = () => {
 
   return (
     <div style={{ padding: "2rem" }}>
+      <User/>
       <h1 className="text-4xl">Blog Posts</h1>
       {blogs.map((blog) => {
         const { id, title, content, image } = blog;
